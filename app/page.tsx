@@ -1,101 +1,161 @@
-import Image from "next/image";
+"use client"
 
-export default function Home() {
+import { useState } from 'react'
+import { motion } from 'framer-motion'
+
+export default function MinimalPortfolio() {
+  const [hoveredProject, setHoveredProject] = useState<number | null>(null)
+  const draw = {
+    hidden: { pathLength: 0, opacity: 0 },
+    visible: (i: number) => {
+      const delay = 1 + i * 0.5;
+      return {
+        pathLength: 1,
+        opacity: 1,
+        transition: {
+          pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
+          opacity: { delay, duration: 0.01 }
+        }
+      };
+    }
+  };
+  const projects = [
+    { title: "Project 1", description: "A brief description of Project 1", image: "/placeholder.svg?height=300&width=300" },
+    { title: "Project 2", description: "A brief description of Project 2", image: "/placeholder.svg?height=300&width=300" },
+    { title: "Project 3", description: "A brief description of Project 3", image: "/placeholder.svg?height=300&width=300" },
+    { title: "Project 4", description: "A brief description of Project 4", image: "/placeholder.svg?height=300&width=300" },
+  ]
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen bg-gray-950 text-white">
+      <header className="py-8 px-8 md:px-16 lg:px-24">
+        <nav className="flex justify-between items-center max-w-7xl mx-auto">
+          <a href="#" className="flex-shrink-0">
+            <svg width="90" height="34" viewBox="0 0 290 234" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fillRule="evenodd" clipRule="evenodd" d="M0.5 233.5C19.3 191.5 17.3333 171.333 14 166.5C5.66667 146.667 -5.1 96 18.5 52C26 70.5 35.3333 59.3333 37.5 53C39.7237 46.5 35.4 37.2 23 42C34.6667 16.3333 73.1 -24.1 133.5 19.5C157 43.6667 202 99.6 194 130C190.333 146.5 170.6 180.8 121 186C119.333 186.5 117.3 188.4 122.5 192C129 196.5 187.5 179.5 202.5 132C201 141 212.9 167.9 272.5 203.5C279.833 210 293.4 224.7 289 231.5L0.5 233.5ZM93.5 39.5C85.3333 30.3333 64.4 17.5 46 39.5C40.8 50.3 40.8333 70 41.5 78.5C39.9 92.5 56.8333 132 65.5 150C83.5 126 92.6667 100 95 90C101.4 65.6 96.6667 46.1667 93.5 39.5ZM129 39.5C124.667 38 115 40 116 52.5C116.16 54.4944 119.5 64.5 130.5 60.5C137.5 56.5 134.778 41.5 129 39.5Z" fill="white" />
+              <path d="M54.5 42C64.9 32 79.8333 37.8333 86 42C89.3333 49.5 94.3 69.2 87.5 88C84.5 98.5 76.2 122.2 67 133C56.8333 114.833 40.1 71.2 54.5 42Z" fill="white" />
+            </svg>
+          </a>
+          <ul className="flex space-x-6 md:space-x-12">
+            <li><a href="#about" className="hover:text-gray-300 transition-colors">About</a></li>
+            <li><a href="#projects" className="hover:text-gray-300 transition-colors">Projects</a></li>
+            <li><a href="#contact" className="hover:text-gray-300 transition-colors">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      <main className="px-8 md:px-16 lg:px-24">
+        <section id="about" className="flex flex-col items-center justify-center min-h-[calc(100vh-80px)] text-center">
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-12"
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <motion.svg
+              className="w-full h-auto"
+              viewBox="0 0 290 234"
+              initial="hidden"
+              animate="visible"
+            >
+              <motion.path
+                d="M0.5 233.5C19.3 191.5 17.3333 171.333 14 166.5C5.66667 146.667 -5.1 96 18.5 52C26 70.5 35.3333 59.3333 37.5 53C39.7237 46.5 35.4 37.2 23 42C34.6667 16.3333 73.1 -24.1 133.5 19.5C157 43.6667 202 99.6 194 130C190.333 146.5 170.6 180.8 121 186C119.333 186.5 117.3 188.4 122.5 192C129 196.5 187.5 179.5 202.5 132C201 141 212.9 167.9 272.5 203.5C279.833 210 293.4 224.7 289 231.5L0.5 233.5Z"
+                variants={draw}
+                custom={0}
+                stroke="white"
+                strokeWidth="2"
+                fill="none"
+              />
+              <motion.path
+                d="M93.5 39.5C85.3333 30.3333 64.4 17.5 46 39.5C40.8 50.3 40.8333 70 41.5 78.5C39.9 92.5 56.8333 132 65.5 150C83.5 126 92.6667 100 95 90C101.4 65.6 96.6667 46.1667 93.5 39.5Z"
+                variants={draw}
+                custom={1}
+                stroke="white"
+                strokeWidth="2"
+                fill="none"
+              />
+              <motion.path
+                d="M129 39.5C124.667 38 115 40 116 52.5C116.16 54.4944 119.5 64.5 130.5 60.5C137.5 56.5 134.778 41.5 129 39.5Z"
+                variants={draw}
+                custom={2}
+                stroke="white"
+                strokeWidth="2"
+                fill="none"
+              />
+              <motion.path
+                d="M54.5 42C64.9 32 79.8333 37.8333 86 42C89.3333 49.5 94.3 69.2 87.5 88C84.5 98.5 76.2 122.2 67 133C56.8333 114.833 40.1 71.2 54.5 42Z"
+                variants={draw}
+                custom={3}
+                stroke="white"
+                strokeWidth="2"
+                fill="none"
+              />
+            </motion.svg>
+          </motion.div>
+          </section>
+          <motion.h1
+            className="text-5xl md:text-7xl lg:text-9xl font-bold mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Read our docs
+            山田太郎
+          </motion.h1>
+          <motion.p
+            className="text-xl md:text-2xl lg:text-3xl text-gray-400 max-w-3xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            フルスタックエンジニア。ミニマルなデザインと効率的なコードで、
+            ユーザー体験を向上させるウェブアプリケーションを作成しています。
+          </motion.p>
+
+        <section id="projects" className="py-24">
+          <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {projects.map((project, index) => (
+              <motion.div
+                key={index}
+                className="relative aspect-square"
+                onMouseEnter={() => setHoveredProject(index)}
+                onMouseLeave={() => setHoveredProject(null)}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
+                {hoveredProject === index && (
+                  <div className="absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center p-6">
+                    <div className="text-center">
+                      <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+                      <p className="text-gray-300">{project.description}</p>
+                    </div>
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        <section id="contact" className="py-24 text-center">
+          <h2 className="text-3xl font-bold mb-8">Contact</h2>
+          <p className="text-xl text-gray-400 mb-4">
+            お問い合わせは以下のメールアドレスまでお願いします：
+          </p>
+          <a href="mailto:contact@example.com" className="text-2xl hover:text-gray-300 transition-colors">
+            contact@example.com
           </a>
-        </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="text-center text-gray-500 py-8">
+        <p>&copy; 2024 山田太郎. All rights reserved.</p>
       </footer>
     </div>
-  );
+  )
 }
