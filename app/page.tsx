@@ -9,7 +9,7 @@ export default function MinimalPortfolio() {
   const controls = useAnimation()
 
   const fullText = "Hello there!\n I'm amatatu!"
-  
+
   const draw = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: (i: number) => {
@@ -43,21 +43,21 @@ export default function MinimalPortfolio() {
   useEffect(() => {
     const typeText = async () => {
       await controls.start({ opacity: 1 })
-      const lines=fullText.split("\n")
+      const lines = fullText.split("\n")
 
       for (let lineIndex = 0; lineIndex < lines.length; lineIndex++) {
-        const line=lines[lineIndex];
-        for(let charIndex=0;charIndex<=line.length;charIndex++){
-          setTypedText(prev=>{
-            const newLines=[...prev];
-            newLines[lineIndex]=line.slice(0,charIndex);
+        const line = lines[lineIndex];
+        for (let charIndex = 0; charIndex <= line.length; charIndex++) {
+          setTypedText(prev => {
+            const newLines = [...prev];
+            newLines[lineIndex] = line.slice(0, charIndex);
             console.log(newLines)
             return newLines;
           })
-          await new Promise(resolve=>setTimeout(resolve,80))
+          await new Promise(resolve => setTimeout(resolve, 80))
         }
-        if (lineIndex<lines.length-1){
-          setTypedText(prev=>[...prev,''])
+        if (lineIndex < lines.length - 1) {
+          setTypedText(prev => [...prev, ''])
         }
       }
     }
@@ -91,10 +91,10 @@ export default function MinimalPortfolio() {
           >
             <div className='my-12 flex flex-col items-center'>
               <motion.h1
-                className="text-6xl font-bold my-10 "
+                className="text-3xl font-bold my-10 md:text-5xl lg:text-6xl"
                 initial={{ opacity: 0 }}
                 animate={controls}
-                >
+              >
                 {/* <motion.span
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -103,21 +103,21 @@ export default function MinimalPortfolio() {
                   <div className='w-19 bg-w
                   hite'></div>
                 </motion.span> */}
-                {typedText.map((line,index)=>(
+                {typedText.map((line, index) => (
                   <span key={index} className="block">
-                    {index==1?(
+                    {index == 1 ? (
                       <>
-                      <span className="inline-block">{line.slice(0,4)}</span>
-                      <span className="text-8xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-red-500">
-                        {line.slice(4)}
-                      </span>
+                        <span className="inline-block">{line.slice(0, 4)}</span>
+                        <span className="text-5xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-red-500 md:text-6xl lg:text-8xl">
+                          {line.slice(4)}
+                        </span>
                       </>
-                    ):(
+                    ) : (
                       <span>{line}</span>
-                      
+
                     )
                     }
-                    {index===typedText.length-1&&<span className="curosor"></span>}
+                    {index === typedText.length - 1 && <span className="curosor"></span>}
                   </span>
                 ))}
               </motion.h1>
@@ -135,33 +135,44 @@ export default function MinimalPortfolio() {
                     variants={draw}
                     custom={0}
                     stroke="white"
-                    strokeWidth="2"
+                    strokeWidth="3"
                     fill="none"
                   />
+                  
                   <motion.path
                     d="M93.5 39.5C85.3333 30.3333 64.4 17.5 46 39.5C40.8 50.3 40.8333 70 41.5 78.5C39.9 92.5 56.8333 132 65.5 150C83.5 126 92.6667 100 95 90C101.4 65.6 96.6667 46.1667 93.5 39.5Z"
                     variants={draw}
                     custom={1}
                     stroke="white"
-                    strokeWidth="2"
-                    fill="none"
+                    strokeWidth="3"
+                    fill="030712"
                   />
-                  <motion.path
+                    <motion.path
+                      d="M54.5 42C64.9 32 79.8333 37.8333 86 42C89.3333 49.5 94.3 69.2 87.5 88C84.5 98.5 76.2 122.2 67 133C56.8333 114.833 40.1 71.2 54.5 42Z"
+                      variants={draw}
+                      custom={2}
+                      stroke="white"
+                      strokeWidth="3"
+                      fill="white"
+                    />
+                  <motion.circle
+                    cx="123"
+                    cy="50"
+                    r="11"
+                    variants={draw}
+                    custom={2}
+                    stroke="white"
+                    strokeWidth="3"
+                    fill="#030712"
+                  />
+                  {/* <motion.path
                     d="M129 39.5C124.667 38 115 40 116 52.5C116.16 54.4944 119.5 64.5 130.5 60.5C137.5 56.5 134.778 41.5 129 39.5Z"
                     variants={draw}
                     custom={2}
                     stroke="white"
-                    strokeWidth="2"
+                    strokeWidth="3"
                     fill="none"
-                  />
-                  <motion.path
-                    d="M54.5 42C64.9 32 79.8333 37.8333 86 42C89.3333 49.5 94.3 69.2 87.5 88C84.5 98.5 76.2 122.2 67 133C56.8333 114.833 40.1 71.2 54.5 42Z"
-                    variants={draw}
-                    custom={3}
-                    stroke="white"
-                    strokeWidth="2"
-                    fill="none"
-                  />
+                  /> */}
                 </motion.g>
               </motion.svg>
             </div>
@@ -189,7 +200,7 @@ export default function MinimalPortfolio() {
           </div>
         </section>
       </main>
-    <style jsx>{`
+      <style jsx>{`
       .cursor{
         width:10px;
         height:47px;
