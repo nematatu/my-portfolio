@@ -1,27 +1,31 @@
 "use client"
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
+import { motion, useAnimation } from 'framer-motion'
 
 export default function MinimalPortfolio() {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null)
+  const [typedText, setTypedText] = useState("")
+  const controls = useAnimation()
+
+  const fullText = "amatatu's portfolio!"
   const draw = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: (i: number) => {
-      const delay = 1 + i * 0.5;
+      const delay = 1 + i * 0.8;
       return {
         pathLength: 1,
         opacity: 1,
         transition: {
-          pathLength: { 
-            delay, 
-            type: "spring", 
-            duration: 1.5, 
-            bounce: 0 
+          pathLength: {
+            delay,
+            type: "spring",
+            duration: 1.5,
+            bounce: 0
           },
-          opacity: { 
-            delay, 
-            duration: 0.01 
+          opacity: {
+            delay,
+            duration: 0.01
           }
         }
       };
@@ -35,6 +39,16 @@ export default function MinimalPortfolio() {
     { title: "Project 4", description: "A brief description of Project 4", image: "/placeholder.svg?height=300&width=300" },
   ];
 
+  useEffect(() => {
+    const typeText = async () => {
+      await controls.start({ opacity: 1 })
+      for (let i = 0; i <= fullText.length; i++) {
+        setTypedText(fullText.slice(0, i))
+        await new Promise(resolve => setTimeout(resolve, 80))
+      }
+    }
+    typeText()
+  }, [controls, fullText])
   return (
     <div className="min-h-screen bg-gray-950 text-white">
       <header className="py-8 px-8 md:px-16 lg:px-24">
@@ -62,7 +76,22 @@ export default function MinimalPortfolio() {
             className="mb-12 "
           >
             <div className='my-12 flex flex-col items-center'>
-              <h1 className="text-4xl font-bold">Welcome to My Portfolio</h1>
+              <motion.h1
+                className="text-6xl font-bold my-10 "
+                initial={{ opacity: 0 }}
+                animate={controls}
+                >
+                {typedText}
+                {/* <motion.span
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ repeat: Infinity, duration: 0.7, repeatType: 'reverse' }}
+                >
+                  <div className='w-19 bg-w
+                  hite'></div>
+                </motion.span> */}
+                <span className='cursor'></span>
+              </motion.h1>
               <p className="mt-4 text-lg">I am a web developer specialized in building exceptional digital experiences.</p>
             </div>
             <div className='flex flex-col items-center'>
@@ -132,6 +161,21 @@ export default function MinimalPortfolio() {
           </div>
         </section>
       </main>
+    <style jsx>{`
+      .cursor{
+        width:10px;
+        height:47px;
+        background-color:white;
+        display:inline-block;
+        animation:blink 1s step-end infinite;
+        margin-left:10px;
+      }
+      @keyframes blink{
+        50%{
+          opacity:0;
+        }
+      }
+    `}</style>
     </div>
   )
 }
