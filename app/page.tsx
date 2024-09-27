@@ -5,10 +5,11 @@ import { motion, useAnimation } from 'framer-motion'
 
 export default function MinimalPortfolio() {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null)
-  const [typedText, setTypedText] = useState("")
+  const [typedText, setTypedText] = useState<string[]>([])
   const controls = useAnimation()
 
-  const fullText = "amatatu's portfolio!"
+  const fullText = "Hello there!\n I'm amatatu!"
+  
   const draw = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: (i: number) => {
@@ -42,9 +43,22 @@ export default function MinimalPortfolio() {
   useEffect(() => {
     const typeText = async () => {
       await controls.start({ opacity: 1 })
-      for (let i = 0; i <= fullText.length; i++) {
-        setTypedText(fullText.slice(0, i))
-        await new Promise(resolve => setTimeout(resolve, 80))
+      const lines=fullText.split("\n")
+
+      for (let lineIndex = 0; lineIndex < lines.length; lineIndex++) {
+        const line=lines[lineIndex];
+        for(let charIndex=0;charIndex<=line.length;charIndex++){
+          setTypedText(prev=>{
+            const newLines=[...prev];
+            newLines[lineIndex]=line.slice(0,charIndex);
+            console.log(newLines)
+            return newLines;
+          })
+          await new Promise(resolve=>setTimeout(resolve,80))
+        }
+        if (lineIndex<lines.length-1){
+          setTypedText(prev=>[...prev,''])
+        }
       }
     }
     typeText()
@@ -81,7 +95,6 @@ export default function MinimalPortfolio() {
                 initial={{ opacity: 0 }}
                 animate={controls}
                 >
-                {typedText}
                 {/* <motion.span
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -90,9 +103,24 @@ export default function MinimalPortfolio() {
                   <div className='w-19 bg-w
                   hite'></div>
                 </motion.span> */}
-                <span className='cursor'></span>
+                {typedText.map((line,index)=>(
+                  <span key={index} className="block">
+                    {index==1?(
+                      <>
+                      <span className="inline-block">{line.slice(0,4)}</span>
+                      <span className="text-8xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-red-500">
+                        {line.slice(4)}
+                      </span>
+                      </>
+                    ):(
+                      <span>{line}</span>
+                      
+                    )
+                    }
+                    {index===typedText.length-1&&<span className="curosor"></span>}
+                  </span>
+                ))}
               </motion.h1>
-              <p className="mt-4 text-lg">I am a web developer specialized in building exceptional digital experiences.</p>
             </div>
             <div className='flex flex-col items-center'>
               <motion.svg
@@ -140,13 +168,13 @@ export default function MinimalPortfolio() {
           </motion.div>
         </section>
 
-        <section id="projects" className="py-16">
+        <section id="projects" className=" py-16">
           <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <motion.div
                 key={index}
-                className="bg-gray-800 p-4 rounded-lg cursor-pointer"
+                className=" p-4 rounded-lg cursor-pointer"
                 onMouseEnter={() => setHoveredProject(index)}
                 onMouseLeave={() => setHoveredProject(null)}
                 initial={{ opacity: 0, y: 20 }}
