@@ -3,10 +3,8 @@
 import { useState, useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import Particles from "@/components/ui/particles";
-import Image from 'next/image'
 
 export default function MinimalPortfolio() {
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null)
   const [typedText, setTypedText] = useState<string[]>([])
   const controls = useAnimation()
 
@@ -144,8 +142,6 @@ export default function MinimalPortfolio() {
               <motion.div
                 key={index}
                 className="bg-gray-800 p-4 rounded-lg cursor-pointer"
-                onMouseEnter={() => setHoveredProject(index)}
-                onMouseLeave={() => setHoveredProject(null)}
                 initial={{ opacity: 0, y: 20 }}
                 whileHover={{ scale: 1.05 }}
                 animate={{ opacity: 1, y: 0 }}
