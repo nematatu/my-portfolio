@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import Particles from "@/components/ui/particles";
+import Ripple from '@/components/ui/ripple';
 
 export default function MinimalPortfolio() {
   const [typedText, setTypedText] = useState<string[]>([])
@@ -79,12 +80,11 @@ export default function MinimalPortfolio() {
 
       <Particles
         className="fixed inset-0 z-10"
-        quantity={200}
+        quantity={30}
         ease={100}
         color={color}
         refresh
       />
-
       <main className="px-8 md:px-16 lg:px-24">
 
         <section id="hello" className=" flex flex-col items-center mt-[2rem] min-h-[calc(100vh-100px)] relative text-center">
