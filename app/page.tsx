@@ -2,10 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
-import { ConfettiButton } from '@/components/ui/confetti'
-import { useTheme } from 'next-themes'
 import Particles from "@/components/ui/particles";
-import Meteors from '@/components/ui/meteors'
 import Image from 'next/image'
 
 export default function MinimalPortfolio() {
@@ -14,31 +11,8 @@ export default function MinimalPortfolio() {
   const controls = useAnimation()
 
   const fullText = "Hello there!\n I'm amatatu!"
-  const { theme } = useTheme();
   const color = "#ffffff";
 
-  const draw = {
-    hidden: { pathLength: 0, opacity: 0 },
-    visible: (i: number) => {
-      const delay = 1 + i * 0.8;
-      return {
-        pathLength: 1,
-        opacity: 1,
-        transition: {
-          pathLength: {
-            delay,
-            type: "spring",
-            duration: 1.5,
-            bounce: 0
-          },
-          opacity: {
-            delay,
-            duration: 0.01
-          }
-        }
-      };
-    }
-  };
 
   const projects = [
     { title: "Project 1", description: "A brief description of Project 1", image: "/placeholder.svg?height=300&width=300" },
