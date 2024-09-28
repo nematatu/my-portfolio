@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import Particles from "@/components/ui/particles";
-import Ripple from '@/components/ui/ripple';
 
 export default function MinimalPortfolio() {
   const [typedText, setTypedText] = useState<string[]>([])
