@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, useAnimation, useScroll } from 'framer-motion'
 import Particles from "@/components/ui/particles";
 import { Menu } from "lucide-react"
-import { iBM_Plex_Mono } from "@/ui/fonts"
+import { iBM_Plex_Mono } from "@/app/ui/fonts"
 
 export default function MinimalPortfolio() {
   const [typedText, setTypedText] = useState<string[]>([])
@@ -125,9 +125,9 @@ export default function MinimalPortfolio() {
       <main className="px-8 md:px-16 lg:px-24">
 
         <section id="hello"
-         className=" flex flex-col items-center justify-center mt-[-5rem] lg:mt-[-3rem] min-h-screen relative  text-left lg:text-center"
+         className=" flex flex-col items-center justify-center min-h-screen relative text-left lg:text-center"
          >
-            <div className='my-1 flex flex-col items-center'>
+            <div className='mb-[7rem]  flex flex-col items-center '>
               <motion.h1
                 className={`${iBM_Plex_Mono.className} text-6xl font-bold my-10 lg:text-7xl  `}
                 initial={{ opacity: 0 }}
