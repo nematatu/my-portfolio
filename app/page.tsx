@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, useAnimation, useScroll } from 'framer-motion'
 import Particles from "@/components/ui/particles";
 import {Menu} from "lucide-react"
+import {iBM_Plex_Mono} from "@/ui/fonts"
 
 export default function MinimalPortfolio() {
   const [typedText, setTypedText] = useState<string[]>([])
@@ -119,6 +120,7 @@ export default function MinimalPortfolio() {
         src="/blob-scene-haikei.png" 
         layout='fill'
         objectFit='cover' 
+　       
         alt="image" 
         /> */}
 
@@ -141,7 +143,7 @@ export default function MinimalPortfolio() {
             <div className='my-12 flex flex-col items-center'>
               <div className='bg-haikei'></div>
               <motion.h1
-                className="text-3xl font-bold my-10 md:text-5xl lg:text-6xl"
+                className={`${iBM_Plex_Mono.className} text-3xl font-bold my-10 md:text-5xl lg:text-6xl`}
                 initial={{ opacity: 0 }}
                 animate={controls}
               >
@@ -167,7 +169,6 @@ export default function MinimalPortfolio() {
 
                     )
                     }
-                    {index === typedText.length - 1 && <span className="cursor"></span>}
                   </span>
                 ))}
               </motion.h1>
