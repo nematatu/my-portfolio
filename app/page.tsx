@@ -125,7 +125,7 @@ export default function MinimalPortfolio() {
       <main className="px-8 md:px-16 lg:px-24">
 
         <section id="hello"
-         className=" flex flex-col items-center justify-center mt-[-4rem] lg:mt-[-3rem] min-h-screen relative  text-left lg:text-center"
+         className=" flex flex-col items-center justify-center mt-[-5rem] lg:mt-[-3rem] min-h-screen relative  text-left lg:text-center"
          >
             <div className='my-1 flex flex-col items-center'>
               <motion.h1
