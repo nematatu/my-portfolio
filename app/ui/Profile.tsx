@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import profileSVG from '@/public/icon.svg'
+import profileSVG from '/Users/nekantatsuju/local_dev/my-portfolio/public/icon.svg'
 import '@/app/styles/Profile.css'
 
 export default function Profile() {
