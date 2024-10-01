@@ -29,7 +29,7 @@ export default function Profile() {
             <h1 className='font-bold text-2xl text-gray-300 text-right '>
               Age :
             </h1>
-            <div className='text-[1rem] flex  space-x-4 '>
+            <div className='text-[1rem] md:text-[1.2rem] flex  space-x-4 '>
               <p>
                 20
               </p>
@@ -37,7 +37,7 @@ export default function Profile() {
             <h1 className='font-bold text-2xl text-gray-300 text-right'>
               Hobby :
             </h1>
-            <div className='text-[1rem] flex  space-x-4 '>
+            <div className='text-[1rem] md:text-[1.2rem] flex  space-x-4 '>
               <p>
                 Badminton 🏸
               </p>
@@ -49,7 +49,7 @@ export default function Profile() {
             <h1 className='font-bold text-2xl text-gray-300 text-right'>
               Music :
             </h1>
-            <div className='text-[1rem] flex  space-x-4 '>
+            <div className='text-[1rem] md:text-[1.2rem] flex  space-x-4 '>
               <p>
                 Yorushika
               </p>
