@@ -1,15 +1,65 @@
+import Image from 'next/image'
+import profileSVG from '@/public/icon.svg'
+import '@/app/styles/Profile.css'
 
-export default function Profile(){
-    return(
-    <section id="projects" className=" py-16 relative z-30">
-          <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <svg width="290" height="234" viewBox="0 0 290 234" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 233.5C19.3 191.5 17.3333 171.333 14 166.5C5.66667 146.667 -5.1 96 18.5 52C26 70.5 35.3333 59.3333 37.5 53C39.7237 46.5 35.4 37.2 23 42C34.6667 16.3333 73.1 -24.1 133.5 19.5C157 43.6667 202 99.6 194 130C190.333 146.5 170.6 180.8 121 186C119.333 186.5 117.3 188.4 122.5 192C129 196.5 187.5 179.5 202.5 132C201 141 212.9 167.9 272.5 203.5C279.833 210 293.4 224.7 289 231.5L0.5 233.5ZM93.5 39.5C85.3333 30.3333 64.4 17.5 46 39.5C40.8 50.3 40.8333 70 41.5 78.5C39.9 92.5 56.8333 132 65.5 150C83.5 126 92.6667 100 95 90C101.4 65.6 96.6667 46.1667 93.5 39.5ZM129 39.5C124.667 38 115 40 116 52.5C116.16 54.4944 119.5 64.5 130.5 60.5C137.5 56.5 134.778 41.5 129 39.5Z" fill="white"/>
-<path d="M54.5 42C64.9 32 79.8333 37.8333 86 42C89.3333 49.5 94.3 69.2 87.5 88C84.5 98.5 76.2 122.2 67 133C56.8333 114.833 40.1 71.2 54.5 42Z" fill="white"/>
-</svg>
-
+export default function Profile() {
+  return (
+    <section id="Profile" className="offset-anchor  py-16 relative z-30">
+      <h2 className="text-5xl font-bold text-center mb-[8rem]">Profile</h2>
+      <div className='md:px-[9rem] flex flex-col lg:flex-row items-center  justify-between '>
+        <Image src={profileSVG} alt='profile' className='circle' width={260} />
+        <div className='flex flex-col space-y-8  '>
+          <div className='underline-profile mb-[1rem] flex flex-col md:flex-row items-center md:space-x-12  justify-between w-full'>
+            <h1 className='font-bold text-3xl my-8 md:my-0'>
+              あまたつ amatatu
+            </h1>
+            <div className='flex  space-x-4 '>
+              <a href="https://twitter.com/T_kanntoku" target="_blank" rel="noopener noreferrer" className="hover-effect border border-transparent hover:border hover:border-gray-300 p-1 rounded">
+                <Image src='/sns/x.svg' alt='twitter' width={40} height={40} />
+              </a>
+              <a href="https://zenn.com/ama" target="_blank" rel="noopener noreferrer" className="hover-effect border border-transparent hover:border hover:border-gray-300 p-1 rounded">
+                <Image src='/sns/zenn.svg' alt='twitter' width={40} height={40} />
+              </a>
+              <a href="https://github.com/nematatu" target="_blank" rel="noopener noreferrer" className="hover-effect border border-transparent hover:border hover:border-gray-300 p-1 rounded">
+                <Image src='/sns/github.svg' alt='github' width={40} height={40} />
+              </a>
+            </div>
           </div>
-        </section>
-    )
+          <div className='grid grid-cols-[auto,1fr] gap-x-4 gap-y-6 items-center '>
+            <h1 className='font-bold text-2xl text-gray-300 text-right '>
+              Age :
+            </h1>
+            <div className='text-[1rem] flex  space-x-4 '>
+              <p>
+                20
+              </p>
+              </div>
+            <h1 className='font-bold text-2xl text-gray-300 text-right'>
+              Hobby :
+            </h1>
+            <div className='text-[1rem] flex  space-x-4 '>
+              <p>
+                Badminton 🏸
+              </p>
+              <p>
+                Photography 📸
+              </p>
+              </div>
+
+            <h1 className='font-bold text-2xl text-gray-300 text-right'>
+              Music :
+            </h1>
+            <div className='text-[1rem] flex  space-x-4 '>
+              <p>
+                Yorushika
+              </p>
+              <p>
+                ZTMY
+              </p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }

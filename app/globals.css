@@ -76,3 +76,13 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.offset-anchor{
+  position:relative;
+  padding-top:130px;
+  margin-top: 250px;
+}
+
+.title{
+  font-size: large;
+}

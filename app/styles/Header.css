@@ -1,0 +1,20 @@
+.hover-effect-header{
+    position:relative;
+    padding: 0.5rem;
+}
+
+.hover-effect-header::after{
+    content:'';
+    position:absolute;
+    top:43px;
+    left:-2px;
+    width:0;
+    height: 3px;
+    background-color: white;
+    transition:width 0.3s ease;
+}
+
+.hover-effect-header:hover::after{
+    width:103%
+}
+
