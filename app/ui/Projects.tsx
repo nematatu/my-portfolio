@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Database, Server, Globe } from 'lucide-react';
+import { X} from 'lucide-react';
 import { Icon } from '@iconify/react';
 import nextjsIcon from '@iconify-icons/logos/nextjs-icon';
 import tailwindIcon from '@iconify-icons/logos/tailwindcss-icon';
@@ -38,7 +38,7 @@ const projects: Project[] = [
         title: "Portfolio",
         description: "This Portfolio",
         image: "/Portfolio.png",
-        longDescription: "This is a longer description of Project 1, explaining its features and purpose in more detail.",
+        longDescription: "フロントの勉強用に作りました！",
         url: "https://amatatu.com",
         githubUrl: "https://github.com/nematatu/next-portfolio",
         technologies: ["Next.js", "Tailwind CSS","TypeScript"]
