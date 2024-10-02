@@ -49,7 +49,7 @@ export default function Profile() {
             </h1>
             <div className='text-[1rem] md:text-[1.2rem] flex  space-x-4 '>
               <p>
-                20
+                21
               </p>
             </div>
             <h1 className='font-bold text-2xl text-gray-300 text-right'>
