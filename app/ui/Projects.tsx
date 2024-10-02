@@ -10,6 +10,8 @@ import tailwindIcon from '@iconify-icons/logos/tailwindcss-icon';
 import typeScriptIcon from '@iconify-icons/logos/typescript-icon';
 import nodejsIcon from '@iconify-icons/logos/nodejs-icon';
 import postgresqlIcon from '@iconify-icons/logos/postgresql';
+import Link from 'next/link';
+
 interface Technology {
     name: string;
     icon: React.ElementType;
@@ -113,22 +115,22 @@ export default function Projects() {
                                 </div>
                             </div>
                             <div className=" flex space-x-4">
-                <a
+                <Link
                   href={selectedProject.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                 >
                   Visit Project
-                </a>
-                <a
+                </Link>
+                <Link
                   href={selectedProject.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
                 >
                   GitHub Repository
-                </a>
+                </Link>
               </div>
                         </motion.div>
                     </motion.div>

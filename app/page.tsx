@@ -18,12 +18,13 @@ export default function MinimalPortfolio() {
         quantity={30}
         ease={100}
         color={color}
-      />
+        />
       <Header />
       <main className="px-8 md:px-16 lg:px-24">
         <Home/>
         <Profile />
         <Projects />
+        
       </main>
     </div>
   )
