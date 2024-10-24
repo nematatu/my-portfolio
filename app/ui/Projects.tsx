@@ -45,6 +45,16 @@ const projects: Project[] = [
         githubUrl: "https://github.com/nematatu/next-portfolio",
         technologies: ["Next.js", "Tailwind CSS","TypeScript"]
     },
+    
+    {
+        title: "Ogppu",
+        description: "Create Image like OGP",
+        image: "/Portfolio.png",
+        longDescription: "OGPのようなタイトル画像を生成するWebアプリ。",
+        url: "https://ogppu-nematatus-projects.vercel.app/",
+        githubUrl: "https://github.com/nematatu/Ogppu",
+        technologies: ["Next.js", "Tailwind CSS","TypeScript","Python"]
+    },
 ]
 
 export default function Projects() {
