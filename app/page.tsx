@@ -1,21 +1,10 @@
+"use client"
+
 import Particles from "@/components/ui/particles";
 import Profile from "@/components/layouts/v1/Profile"
 import Header from "@/components/layouts/v1/Header"
 import Projects from '@/components/layouts/v1/Projects';
 import Home from '@/components/layouts/v1/Home';
-// 🌟 Static Metadata
-export const metadata = {
-  openGraph: {
-    title: "amatatu",
-    description:
-      "amatatu's portfolio",
-    images: [{
-      url: "/ogp/thumbnail.png", // 🌟 静的画像の指定
-      width: 1200,
-      height: 630
-    }],
-  },
-};
 
 export default function MinimalPortfolio() {
   const color = "#ffffff";
