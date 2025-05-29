@@ -6,13 +6,6 @@ export const metadata: Metadata = {
     openGraph: {
         title: "amatatu",
         description: "amatatu's portfolio",
-        images: [
-            {
-                url: "/ogp/thumbnail.png", // 🌟 静的画像の指定
-                width: 1200,
-                height: 630,
-            },
-        ],
     },
 };
 
