@@ -2,7 +2,6 @@ import { motion, useScroll } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { Menu } from "lucide-react"
 import Link from 'next/link';
-import '@/app/styles/Header.css'
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false)
@@ -44,9 +43,9 @@ export default function Header() {
                     </Link>
 
                     <ul className="hidden text-2xl font-bold md:flex space-x-12">
-                        <li><Link href="#Profile" className="hover-effect-header">Profile</Link></li>
-                        <li><Link href="#Projects" className="hover-effect-header">Projects</Link></li>
-                        <li><Link href="#contact" className="hover-effect-header">Contact</Link></li>
+                        <li><Link href="#Profile" className="relative px-2 py-1 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[3px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">Profile</Link></li>
+                        <li><Link href="#Projects" className="relative px-2 py-1 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[3px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">Projects</Link></li>
+                        <li><Link href="#contact" className="relative px-2 py-1 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[3px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">Contact</Link></li>
                     </ul>
 
                     <button
