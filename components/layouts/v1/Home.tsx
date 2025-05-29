@@ -1,4 +1,4 @@
-import { iBM_Plex_Mono } from "@/app/ui/fonts"
+import { iBM_Plex_Mono } from "@/utils/fonts/v1/fonts"
 import { motion, useAnimation } from 'framer-motion'
 import { useEffect, useState } from "react"
 import '@/app/styles/Home.css'

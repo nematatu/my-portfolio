@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import {fredoka} from '@/app/ui/fonts'
-
-
+import {fredoka} from '@/utils/fonts/v1/fonts'
 
 export const metadata: Metadata = {
   title: "amatatu",

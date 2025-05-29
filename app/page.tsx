@@ -1,10 +1,10 @@
 "use client"
 
 import Particles from "@/components/ui/particles";
-import Profile from "@/app/ui/Profile"
-import Header from "@/app/ui/Header"
-import Projects from '@/app/ui/Projects';
-import Home from '@/app/ui/Home';
+import Profile from "@/components/layouts/v1/Profile"
+import Header from "@/components/layouts/v1/Header"
+import Projects from '@/components/layouts/v1/Projects';
+import Home from '@/components/layouts/v1/Home';
 export default function MinimalPortfolio() {
   const color = "#ffffff";
 
