@@ -6,6 +6,12 @@ import pythonIcon from "@iconify-icons/logos/python";
 import typeScriptIcon from "@iconify-icons/logos/typescript-icon";
 import awsIcon from "@iconify-icons/logos/aws";
 import shellScriptIcon from "@iconify-icons/logos/bash-icon";
+import Github from "@/components/icons/sns/github.svg";
+import Twitter from "@/components/icons/sns/twitter.svg";
+import X from "@/components/icons/sns/x.svg";
+import Zenn from "@/components/icons/sns/zenn.svg";
+import Logo from "@/components/icons/logo.svg";
+import Figmalogo from "@/components/icons/figmalogo.svg";
 
 interface Skills {
     name: string;
@@ -30,12 +36,11 @@ export default function Profile() {
         <section id="Profile" className="offset-anchor py-16 relative z-30">
             <h2 className="text-5xl font-bold text-center mb-32">Profile</h2>
             <div className="md:px-36 flex flex-col lg:flex-row items-center justify-between">
-                <Image
-                    src={profileSVG}
-                    alt="profile"
-                    className="rounded-full border-2 border-white"
-                    width={260}
-                />
+                <div className="w-[550px] overflow-hidden rounded-full border-2 border-white">
+                    <div className="flex items-center jusltify-center">
+                        <Figmalogo className="w-full h-full" />
+                    </div>
+                </div>
                 <div className="flex flex-col space-y-8 mt-8 lg:mt-0 lg:ml-12 w-full">
                     <div className="relative pb-2 border-b-2 border-green-300 flex flex-col md:flex-row items-center md:space-x-12 justify-between w-full">
                         <h1 className="font-bold text-3xl my-8 md:my-0">
@@ -46,30 +51,28 @@ export default function Profile() {
                                 href="https://twitter.com/T_kanntoku"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="transition-transform duration-200 ease-in-out hover:scale-110 hover:-translate-y-2 p-2 rounded border border-transparent hover:border-gray-300"
                             >
-                                <Image src="/sns/x.svg" alt="twitter" width={40} height={40} />
+                                <div className="transition-transform duration-200 ease-in-out hover:scale-110 hover:-translate-y-2 p-2 rounded border border-transparent hover:border-gray-300">
+                                    <X className="w-[40px] h-[40px]" />
+                                </div>
                             </Link>
                             <Link
                                 href="https://zenn.com/ama"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="transition-transform duration-200 ease-in-out hover:scale-110 hover:-translate-y-2 p-2 rounded border border-transparent hover:border-gray-300"
                             >
-                                <Image src="/sns/zenn.svg" alt="zenn" width={40} height={40} />
+                                <div className="transition-transform duration-200 ease-in-out hover:scale-110 hover:-translate-y-2 p-2 rounded border border-transparent hover:border-gray-300">
+                                    <Zenn className="w-[40px] h-[40px]" />
+                                </div>
                             </Link>
                             <Link
                                 href="https://github.com/nematatu"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="transition-transform duration-200 ease-in-out hover:scale-110 hover:-translate-y-2 p-2 rounded border border-transparent hover:border-gray-300"
                             >
-                                <Image
-                                    src="/sns/github.svg"
-                                    alt="github"
-                                    width={40}
-                                    height={40}
-                                />
+                                <div className="transition-transform duration-200 ease-in-out hover:scale-110 hover:-translate-y-2 p-2 rounded border border-transparent hover:border-gray-300">
+                                    <Github className="w-[40px] h-[40px]" />
+                                </div>
                             </Link>
                         </div>
                     </div>
