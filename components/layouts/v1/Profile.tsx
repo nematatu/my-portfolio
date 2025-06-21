@@ -1,5 +1,3 @@
-import Image from "next/image";
-import profileSVG from "@/public/icon.svg";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import pythonIcon from "@iconify-icons/logos/python";
@@ -7,10 +5,8 @@ import typeScriptIcon from "@iconify-icons/logos/typescript-icon";
 import awsIcon from "@iconify-icons/logos/aws";
 import shellScriptIcon from "@iconify-icons/logos/bash-icon";
 import Github from "@/components/icons/sns/github.svg";
-import Twitter from "@/components/icons/sns/twitter.svg";
 import X from "@/components/icons/sns/x.svg";
 import Zenn from "@/components/icons/sns/zenn.svg";
-import Logo from "@/components/icons/logo.svg";
 import Figmalogo from "@/components/icons/figmalogo.svg";
 
 interface Skills {
