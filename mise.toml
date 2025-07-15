@@ -1,2 +1,6 @@
 [tools]
 bun = "latest"
+
+[tasks.lint]
+description = "Run biome"
+run = "bun run format"
