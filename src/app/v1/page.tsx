@@ -1,11 +1,11 @@
 "use client";
 
 import Background from "@/components/backgrounds/v1-bg.svg";
-import Header from "@/components/layouts/v1/Header";
-import Profile from "@/components/layouts/v1/Profile";
-import Particles from "@/components/layouts/v1/particles";
-import Projects from "@/components/layouts/v1/Projects";
-import Home from "@/components/layouts/v1/Home";
+import Header from "@/layouts/v1/Header";
+import Profile from "@/layouts/v1/Profile";
+import Particles from "@/layouts/v1/particles";
+import Projects from "@/layouts/v1/Projects";
+import Home from "@/layouts/v1/Home";
 
 export default function MinimalPortfolio() {
 	return (

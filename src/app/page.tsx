@@ -1,6 +1,6 @@
 "use client";
 
-import Home from "@/components/layouts/v2/Home";
+import Home from "@/layouts/v2/Home";
 
 export default function MinimalPortfolio() {
 	return (
