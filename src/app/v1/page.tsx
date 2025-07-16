@@ -2,10 +2,10 @@
 
 import Background from "@/components/backgrounds/v1-bg.svg";
 import Header from "@/layouts/v1/Header";
-import Profile from "@/layouts/v1/Profile";
-import Particles from "@/layouts/v1/particles";
-import Projects from "@/layouts/v1/Projects";
 import Home from "@/layouts/v1/Home";
+import Profile from "@/layouts/v1/Profile";
+import Projects from "@/layouts/v1/Projects";
+import Particles from "@/layouts/v1/particles";
 
 export default function MinimalPortfolio() {
 	return (
