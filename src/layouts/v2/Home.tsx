@@ -20,15 +20,15 @@ export default function Home() {
 						<div className="space-y-5 md:space-y-10 text-xs md:text-sm lg:text-base tracking-widest">
 							<div className="flex space-x-5 items-center">
 								<Taiyaki className="w-[24px]" />
-								<p className="">About/</p>
+								<p className="whitespace-pre">About /</p>
 							</div>
 							<div className="flex space-x-5 items-center">
 								<Sushi className="w-[24px]" />
-								<p className="">Works/</p>
+								<p className="whitespace-pre">Works /</p>
 							</div>
 							<div className="flex space-x-5 items-center">
 								<NewsPaper className="w-[24px]" />
-								<p className="">Blog/</p>
+								<p className="whitespace-pre">Blog /</p>
 							</div>
 						</div>
 					</div>
