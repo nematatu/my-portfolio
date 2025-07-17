@@ -11,6 +11,6 @@ export const fredoka = Fredoka({
 });
 
 export const zen_Kaku_Gothic_New = Zen_Kaku_Gothic_New({
-    subsets: ["latin"],
-    weight: ["400", "700"],
+	subsets: ["latin"],
+	weight: ["400", "700"],
 });
