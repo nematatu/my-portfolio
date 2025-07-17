@@ -15,8 +15,8 @@ export default function Home() {
 
 				<div className="px-7">
 					<p className="text-[30px] tracking-widest my-6">Amtt</p>
-					<div>
-						<div className="h-[1px] bg-blue-400 mb-7" />
+					<div className="flex space-x-9">
+						<div className="h-[154px] w-[1px] bg-blue-400 mb-7" />
 						<div className="space-y-5 text-sm tracking-widest">
 							<div className="flex space-x-5 items-center">
 								<Taiyaki className="w-[24px]" />
