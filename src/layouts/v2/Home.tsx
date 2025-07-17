@@ -17,7 +17,7 @@ export default function Home() {
 				<div className="pr-12 pl-12">
 					<div className="flex space-x-9">
 						<div className="h-[10vw] w-[1px] bg-blue-400 mb-7" />
-						<div className="space-y-5 text-xs md:text-sm lg:text-base tracking-widest">
+						<div className="space-y-5 md:space-y-10 text-xs md:text-sm lg:text-base tracking-widest">
 							<div className="flex space-x-5 items-center">
 								<Taiyaki className="w-[24px]" />
 								<p className="">About/</p>
