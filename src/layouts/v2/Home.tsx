@@ -14,7 +14,7 @@ export default function Home() {
 					<p className="text-[140%] tracking-widest mt-6">Amtt</p>
 					<div className="flex items-center space-x-4 my-6">
 						<div className="w-[16px] h-[16px] rounded-[5px] bg-white border-blue-400 border-solid border-[1px]" />
-						<div className="w-[77%] h-[1px] bg-blue-400  " />
+						<div className="w-full h-[1px] bg-blue-400"/>
 					</div>
 				</div>
 
