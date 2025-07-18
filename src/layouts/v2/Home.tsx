@@ -14,24 +14,27 @@ export default function Home() {
 					<p className="text-[140%] tracking-widest mt-6">Amtt</p>
 					<div className="flex items-center space-x-4 my-6">
 						<div className="w-[16px] h-[16px] rounded-[5px] bg-white border-blue-400 border-solid border-[1px]" />
-						<div className="w-full h-[1px] bg-blue-400"/>
+						<div className="w-full h-[1px] bg-blue-400" />
 					</div>
 				</div>
 
 				<div className="px-12">
 					<div className="flex space-x-9">
-						<div className="pl-6 space-y-5 md:space-y-10 text-xs md:text-sm lg:text-base tracking-widest">
+						<div className="relative pl-6 space-y-5 md:space-y-10 text-xs md:text-sm lg:text-base tracking-widest">
 							<div className="flex space-x-5 items-center">
 								<Bird className="w-[24px]" />
-								<p className="whitespace-pre">About /</p>
+								<p className="whitespace-pre">About </p>
+								<p className="absolute left-32">{">"}</p>
 							</div>
 							<div className="flex space-x-5 items-center">
 								<Folder className="w-[24px]" />
-								<p className="whitespace-pre">Works /</p>
+								<p className="whitespace-pre">Works </p>
+								<p className="absolute left-32">{">"}</p>
 							</div>
 							<div className="flex space-x-5 items-center">
 								<NewsPaper className="w-[24px]" />
-								<p className="whitespace-pre">Blog /</p>
+								<p className="whitespace-pre">Blog </p>
+								<p className="absolute left-32">{">"}</p>
 							</div>
 						</div>
 					</div>
