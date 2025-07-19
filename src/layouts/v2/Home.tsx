@@ -1,5 +1,4 @@
 import Logo from "@/components/icons/logo.svg";
-import Button from "@/components/button/button";
 
 export default function Home() {
 	return (
@@ -36,7 +35,6 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-            <Button/>
 		</div>
 	);
 }
