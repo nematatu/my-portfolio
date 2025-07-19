@@ -15,7 +15,7 @@ export default function Home() {
 					</div>
 				</div>
 
-				<div className="pl-13 md:pl-16">
+				{/* <div className="pl-13 md:pl-16"> */}
 					<div className="flex space-x-9">
 						<div className="relative pl-6 space-y-5 md:space-y-10 text-xs md:text-sm lg:text-base tracking-widest">
 							<div className="flex space-x-8 items-center">
@@ -35,7 +35,7 @@ export default function Home() {
 							</div>
 						</div>
 					</div>
-				</div>
+				{/* </div> */}
 			</div>
 		</div>
 	);

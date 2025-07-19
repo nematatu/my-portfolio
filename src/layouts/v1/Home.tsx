@@ -1,6 +1,6 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
-import { iBM_Plex_Mono } from "@/utils/fonts/v2/fonts";
+import { iBM_Plex_Mono } from "@/utils/fonts/v1/fonts";
 
 export default function Home() {
 	const [typedText, setTypedText] = useState<string[]>([]);
