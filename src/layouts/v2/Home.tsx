@@ -15,27 +15,25 @@ export default function Home() {
 					</div>
 				</div>
 
-				{/* <div className="pl-13 md:pl-16"> */}
-					<div className="flex space-x-9">
-						<div className="relative pl-6 space-y-5 md:space-y-10 text-xs md:text-sm lg:text-base tracking-widest">
-							<div className="flex space-x-8 items-center">
-						<div className="w-[15px] h-[15px] rounded-[3px] bg-white border-blue-400 border-solid border-[1px]" />
-								<p className="whitespace-pre">About </p>
-								<p className="absolute left-32">{">"}</p>
-							</div>
-							<div className="flex space-x-8 items-center">
-						<div className="w-[15px] h-[15px] rounded-[3px] bg-white border-blue-400 border-solid border-[1px]" />
-								<p className="whitespace-pre">Works </p>
-								<p className="absolute left-32">{">"}</p>
-							</div>
-							<div className="flex space-x-8 items-center">
-						<div className="w-[15px] h-[15px] rounded-[3px] bg-white border-blue-400 border-solid border-[1px]" />
-								<p className="whitespace-pre">Blog </p>
-								<p className="absolute left-32">{">"}</p>
-							</div>
+				<div className="flex flex-col items-center mr-8 text-xs md:text-sm lg:text-base tracking-widest">
+					<div className="relative space-y-8">
+						<div className="flex space-x-8 items-center">
+							<div className="w-[15px] h-[15px] rounded-[3px] bg-white border-blue-400 border-solid border-[1px]" />
+							<p className="whitespace-pre">About </p>
+							<p className="absolute left-24">{">"}</p>
+						</div>
+						<div className="flex space-x-8 items-center">
+							<div className="w-[15px] h-[15px] rounded-[3px] bg-white border-blue-400 border-solid border-[1px]" />
+							<p className="whitespace-pre">Works </p>
+							<p className="absolute left-24">{">"}</p>
+						</div>
+						<div className="flex space-x-8 items-center">
+							<div className="w-[15px] h-[15px] rounded-[3px] bg-white border-blue-400 border-solid border-[1px]" />
+							<p className="whitespace-pre">Blog </p>
+							<p className="absolute left-24">{">"}</p>
 						</div>
 					</div>
-				{/* </div> */}
+				</div>
 			</div>
 		</div>
 	);
