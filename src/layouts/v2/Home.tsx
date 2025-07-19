@@ -1,4 +1,5 @@
 import Logo from "@/components/icons/logo.svg";
+import Button from "@/components/button/button";
 
 export default function Home() {
 	return (
@@ -10,7 +11,7 @@ export default function Home() {
 					</div>
 					<p className="text-2xl tracking-widest my-8">Amtt</p>
 					<div className="flex items-center space-x-8">
-						<div className="w-[20px] h-[19px] rounded-[4px] bg-gray-100 dark:bg-gray-700 border-gray-700 dark:border-gray-200 border-solid border-[1.5px]" />
+						<div className="w-[20px] h-[19px] rounded-[4px] bg-white dark:bg-gray-700 border-gray-700 dark:border-gray-200 border-solid border-[1.5px]" />
 						<div className="w-full h-[1.5px] bg-gray-700 dark:bg-gray-200" />
 					</div>
 				</div>
@@ -18,23 +19,24 @@ export default function Home() {
 				<div className="flex flex-col items-center mr-8 text-lg tracking-widest">
 					<div className="relative space-y-8">
 						<div className="flex space-x-8 items-center">
-							<div className="w-[15px] h-[15px] rounded-[3px] bg-gray-100 dark:bg-gray-700 border-gray-700 dark:border-gray-200 border-solid border-[1.5px]"/>
+							<div className="w-[15px] h-[15px] rounded-[3px] bg-white dark:bg-gray-700 border-gray-700 dark:border-gray-200 border-solid border-[1.5px]"/>
 							<p className="whitespace-pre">About </p>
 							<p className="absolute left-24">{">"}</p>
 						</div>
 						<div className="flex space-x-8 items-center">
-							<div className="w-[15px] h-[15px] rounded-[3px] bg-gray-100 dark:bg-gray-700 border-gray-700 dark:border-gray-200 border-solid border-[1.5px]"/>
+							<div className="w-[15px] h-[15px] rounded-[3px] bg-white dark:bg-gray-700 border-gray-700 dark:border-gray-200 border-solid border-[1.5px]"/>
 							<p className="whitespace-pre">Works </p>
 							<p className="absolute left-24">{">"}</p>
 						</div>
 						<div className="flex space-x-8 items-center">
-							<div className="w-[15px] h-[15px] rounded-[3px] bg-gray-100 dark:bg-gray-700 border-gray-700 dark:border-gray-200 border-solid border-[1.5px]"/>
+							<div className="w-[15px] h-[15px] rounded-[3px] bg-white dark:bg-gray-700 border-gray-700 dark:border-gray-200 border-solid border-[1.5px]"/>
 							<p className="whitespace-pre">Blog </p>
 							<p className="absolute left-24">{">"}</p>
 						</div>
 					</div>
 				</div>
 			</div>
+            <Button/>
 		</div>
 	);
 }
