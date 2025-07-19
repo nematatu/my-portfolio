@@ -1,6 +1,3 @@
-import Folder from "@/components/icons/japan/B_folder.svg";
-import NewsPaper from "@/components/icons/japan/B_newspaper.svg";
-import Bird from "@/components/icons/japan/N_birdwatching.svg";
 import Logo from "@/components/icons/logo.svg";
 
 export default function Home() {
@@ -13,26 +10,26 @@ export default function Home() {
 					</div>
 					<p className="text-[140%] tracking-widest mt-6">Amtt</p>
 					<div className="flex items-center space-x-4 my-6">
-						<div className="w-[16px] h-[16px] rounded-[5px] bg-white border-blue-400 border-solid border-[1px]" />
+						<div className="w-[20px] h-[18px] rounded-[5px] bg-white border-blue-400 border-solid border-[1px]" />
 						<div className="w-full h-[1px] bg-blue-400" />
 					</div>
 				</div>
 
-				<div className="px-12">
+				<div className="pl-13 md:pl-16">
 					<div className="flex space-x-9">
 						<div className="relative pl-6 space-y-5 md:space-y-10 text-xs md:text-sm lg:text-base tracking-widest">
-							<div className="flex space-x-5 items-center">
-								<Bird className="w-[24px]" />
+							<div className="flex space-x-8 items-center">
+						<div className="w-[15px] h-[15px] rounded-[3px] bg-white border-blue-400 border-solid border-[1px]" />
 								<p className="whitespace-pre">About </p>
 								<p className="absolute left-32">{">"}</p>
 							</div>
-							<div className="flex space-x-5 items-center">
-								<Folder className="w-[24px]" />
+							<div className="flex space-x-8 items-center">
+						<div className="w-[15px] h-[15px] rounded-[3px] bg-white border-blue-400 border-solid border-[1px]" />
 								<p className="whitespace-pre">Works </p>
 								<p className="absolute left-32">{">"}</p>
 							</div>
-							<div className="flex space-x-5 items-center">
-								<NewsPaper className="w-[24px]" />
+							<div className="flex space-x-8 items-center">
+						<div className="w-[15px] h-[15px] rounded-[3px] bg-white border-blue-400 border-solid border-[1px]" />
 								<p className="whitespace-pre">Blog </p>
 								<p className="absolute left-32">{">"}</p>
 							</div>
