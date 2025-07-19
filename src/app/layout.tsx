@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { zen_Kaku_Gothic_New } from "@/utils/fonts/v1/fonts";
 import { Providers } from "./providers";
-import ThemeSwitch from "@/components/ui/ThemeSwitch";
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://amatatu.com"),
@@ -21,7 +20,8 @@ export default function RootLayout({
         <html lang="ja">
             <body className={`${zen_Kaku_Gothic_New.className} antialiased`}>
                 <Providers>
-                    <ThemeSwitch />
+                    <div className="bg-transparent">
+                    </div>
                     {children}
                 </Providers>
             </body>
