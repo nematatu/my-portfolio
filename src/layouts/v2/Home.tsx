@@ -23,7 +23,7 @@ export default function Home() {
 						<FadeIn>
 							<div className="flex items-center space-x-8">
 								<div className="w-[20px] h-[18px] rounded-[4px] bg-white dark:bg-gray-800 border-gray-700 dark:border-gray-200 border-solid border-[1.5px]" />
-								<div className="w-full h-[1.5px] bg-gray-700 dark:bg-gray-200" />
+								<div className="w-full h-[1px] bg-gray-700 dark:bg-gray-200" />
 							</div>
 						</FadeIn>
 					</div>
