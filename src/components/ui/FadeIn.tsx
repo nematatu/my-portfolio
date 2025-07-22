@@ -17,7 +17,7 @@ export function FadeIn(props: ComponentPropsWithoutRef<typeof motion.div>) {
 	return (
 		<motion.div
 			transition={{
-				duration: 0.5,
+				duration: 0.4,
 			}}
 			variants={{
 				hidden: {
