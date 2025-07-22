@@ -1,5 +1,5 @@
-import ThemeSwitch from "@/components/ui/ThemeSwitch";
 import Link from "next/link";
+import ThemeSwitch from "@/components/ui/ThemeSwitch";
 
 export default function Header() {
 	return (
