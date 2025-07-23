@@ -3,7 +3,6 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
-import { FadeIn } from "@/components/ui/FadeIn";
 
 export default function ThemeSwitch() {
 	const [mounted, setMounted] = useState(false);
@@ -18,9 +17,7 @@ export default function ThemeSwitch() {
 	if (resolvedTheme === "dark") {
 		return (
 			<div className="cursor-pointer">
-				<FadeIn>
 					<FiSun size={30} onClick={() => setTheme("light")} />
-				</FadeIn>
 			</div>
 		);
 	}
@@ -28,9 +25,7 @@ export default function ThemeSwitch() {
 	if (resolvedTheme === "light") {
 		return (
 			<div className="cursor-pointer">
-				<FadeIn>
 					<FiMoon size={21}  onClick={() => setTheme("dark")} />
-				</FadeIn>
 			</div>
 		);
 	}
