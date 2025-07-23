@@ -17,12 +17,13 @@ export function FadeIn(props: ComponentPropsWithoutRef<typeof motion.div>) {
 	return (
 		<motion.div
 			transition={{
-				duration: 0.4,
+				duration: 0.5,
+        ease: [0.4, 0, 0.2, 1],
 			}}
 			variants={{
 				hidden: {
 					opacity: 0,
-					y: shouldRefuceMotion ? 0 : 20,
+					y: shouldRefuceMotion ? 0 : 30,
 				},
 				visible: {
 					opacity: 1,

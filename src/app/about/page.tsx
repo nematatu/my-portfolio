@@ -7,7 +7,6 @@ import { FadeIn, FadeInWithStagger } from "@/components/ui/FadeIn";
 export default function About() {
 	return (
 		<FadeInWithStagger>
-			<div className="relative bg-gray-100 min-h-screen min-w-screen p-8 text-gray-700 dark:text-gray-200 dark:bg-gray-700">
 				<FadeIn>
 					<Link href="/" className="my-8">
 						<div>
@@ -23,7 +22,6 @@ export default function About() {
 						</div>
 					</FadeIn>
 				</div>
-			</div>
 		</FadeInWithStagger>
 	);
 }
