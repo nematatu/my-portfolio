@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { FadeIn, FadeInWithStagger } from "@/components/ui/FadeIn";
-import Logo from "@/components/icons/logo.svg";
 import ThemeSwitch from "@/components/ui/ThemeSwitch";
 
 export default function Header() {
