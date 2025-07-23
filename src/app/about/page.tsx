@@ -5,7 +5,6 @@ import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiZenn } from "react-icons/si";
-import Logo from "@/components/icons/logo.svg";
 import { FadeIn, FadeInWithStagger } from "@/components/ui/FadeIn";
 import Header from "@/layouts/v2/Header";
 
