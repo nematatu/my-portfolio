@@ -1,26 +1,27 @@
+"use client";
+
 import Link from "next/link";
+import { FadeIn, FadeInWithStagger } from "@/components/ui/FadeIn";
+import Logo from "@/components/icons/logo.svg";
 import ThemeSwitch from "@/components/ui/ThemeSwitch";
 
 export default function Header() {
-	return (
-		<header className=" text-gray-600 body-font">
-			<div className="container mx-auto flex flex-wrap py-5 flex-col md:flex-row items-center">
-				<Link
-					href="/"
-					className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
-				>
-					<span className="dark:text-white text-xl">Somahc</span>
-				</Link>
-				<nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-					<Link href="/about" className="mr-5 hover:text-gray-300">
-						About
-					</Link>
-					<Link href="/blog" className="mr-5 hover:text-gray-300">
-						Blog
-					</Link>
-				</nav>
-				<ThemeSwitch />
-			</div>
-		</header>
-	);
+    return (
+        <header className="flex items-center justify-center">
+            <div className="w-full md:w-2/3">
+            <FadeInWithStagger>
+                <FadeIn>
+                    <div className="rounded-[28px] p-[8px] border-[1.5px] bg-white dark:bg-gray-800 border-solid border-gray-700 dark:border-gray-200 dark:bg-gray-700 flex justify-between items-center px-6">
+                        <Link href="/" className="flex space-x-4">
+                            <p className="text-sm md:text-lg italic text-xl font-bold tracking-widest">Amtt.</p>
+                        </Link>
+                            <div>
+                        <ThemeSwitch />
+                        </div>
+                    </div>
+                </FadeIn>
+            </FadeInWithStagger>
+            </div>
+        </header>
+    );
 }

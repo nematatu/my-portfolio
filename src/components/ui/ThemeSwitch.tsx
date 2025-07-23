@@ -29,7 +29,7 @@ export default function ThemeSwitch() {
 		return (
 			<div className="cursor-pointer">
 				<FadeIn>
-					<FiMoon size={30} onClick={() => setTheme("dark")} />
+					<FiMoon size={21}  onClick={() => setTheme("dark")} />
 				</FadeIn>
 			</div>
 		);
