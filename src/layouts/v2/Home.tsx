@@ -7,9 +7,9 @@ export default function Home() {
 	return (
 		<FadeInWithStagger>
 			<div className="w-5/6 md:w-1/2 lg:w-1/4 mx-auto">
-						<div className="absolute top-8 right-8">
-							<ThemeSwitch />
-						</div>
+				<div className="absolute top-8 right-8">
+					<ThemeSwitch />
+				</div>
 				<div className="w-full pt-10 md:pt-12 pr-12 pl-12 mb-8">
 					<FadeIn>
 						<div className="rounded-[28px] p-[8px] border-[1.5px] bg-white dark:bg-gray-800 border-solid border-gray-700 dark:border-gray-200 ">
@@ -28,7 +28,7 @@ export default function Home() {
 				</div>
 
 				<div className="flex flex-col items-center mr-8 text-lg tracking-widest">
-					<div className="relative space-y-5">
+					<div className="relative space-y-1">
 						<FadeIn>
 							<Link
 								href="/about"
