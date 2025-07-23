@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Logo from "@/components/icons/logo.svg";
-import { FadeIn, FadeInWithStagger } from "@/components/ui/FadeIn";
+import { EaseDriver, FadeIn, FadeInWithStagger } from "@/components/ui/FadeIn";
 import ThemeSwitch from "@/components/ui/ThemeSwitch";
 
 export default function Home() {
@@ -19,12 +19,7 @@ export default function Home() {
 					<FadeIn>
 						<p className="font-bold text-2xl tracking-widest my-8">Amtt</p>
 					</FadeIn>
-					<FadeIn>
-						<div className="flex items-center space-x-4 md:space-x-8">
-							<div className="w-[13px] h-[12px] md:w-[15px] md:h-[13px] rounded-[3px] md:rounded-[4px] bg-white dark:bg-gray-800 border-gray-700 dark:border-gray-200 border-solid border-[1.5px]" />
-							<div className="w-full h-[1px] bg-gray-700 dark:bg-gray-200" />
-						</div>
-					</FadeIn>
+					<EaseDriver />
 				</div>
 
 				<div className="flex flex-col items-center mr-8 text-lg tracking-widest">

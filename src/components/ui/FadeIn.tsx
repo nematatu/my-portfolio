@@ -64,3 +64,24 @@ export function FadeInWithStagger({
 		</StaggerContext.Provider>
 	);
 }
+
+export function EaseDriver() {
+	return (
+		<motion.div
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: true, margin: "0px 0px -20px" }}
+			variants={{
+				hidden: { scaleX: 0 },
+				visible: { scaleX: 1 },
+			}}
+			transition={{
+				duration: 0.8,
+				ease: [0.6, 0.01, -0.05, 0.95],
+			}}
+			style={{ transformOrigin: "left" }}
+		>
+			<div className="w-[100%] h-[1px] bg-gray-700 dark:bg-gray-200" />
+		</motion.div>
+	);
+}

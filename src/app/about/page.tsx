@@ -5,7 +5,7 @@ import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiZenn } from "react-icons/si";
-import { FadeIn, FadeInWithStagger } from "@/components/ui/FadeIn";
+import { EaseDriver, FadeIn, FadeInWithStagger } from "@/components/ui/FadeIn";
 import Header from "@/layouts/v2/Header";
 
 export default function About() {
@@ -23,7 +23,7 @@ export default function About() {
 								About/
 							</p>
 						</div>
-						<div className="flex justify-between space-x-3 md:space-x-4">
+						<div className="flex justify-between space-x-3 md:space-x-4 px-2">
 							<p className="whitespace-pre-line tracking-widest">
 								バドミントンと写真が好き
 								<br />
@@ -45,11 +45,9 @@ export default function About() {
 						</div>
 					</div>
 				</FadeIn>
+				<EaseDriver />
 				<FadeIn>
-					<div className="w-[100%] h-[1px] bg-gray-700 dark:bg-gray-200" />
-				</FadeIn>
-				<FadeIn>
-					<div className="flex flex-col mt-9 md:mt-12 mb-8">
+					<div className="flex flex-col mb-8">
 						<div className="flex space-x-4 md:space-x-8 items-center mb-8">
 							<div className="w-[9px] h-[9px] md:w-[12px] md:h-[12px] rounded-sm bg-white dark:bg-gray-800 border-gray-700 dark:border-gray-200 border-solid border-[1.5px] mt-1" />
 
@@ -57,7 +55,7 @@ export default function About() {
 								Skill
 							</p>
 						</div>
-						<div className="whitespace-pre-line tracking-widest space-y-4">
+						<div className="whitespace-pre-line tracking-widest space-y-4 px-2">
 							<p className="tracking-widest font-bold text-lg md:text-xl">
 								Frontend
 							</p>
