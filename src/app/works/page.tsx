@@ -12,16 +12,18 @@ export default function Works() {
                 <Header />
             </FadeIn>
 
-            <FadeIn>
                 <div className="w-full md:w-1/2 mx-auto space-y-8">
                     <div className="flex flex-col mt-9 md:mt-12">
+                    <FadeIn>
                         <div className="flex space-x-4 md:space-x-8 items-center mb-8">
                             <div className="w-[12px] h-[12px] md:w-[15px] md:h-[15px] rounded-[3px] bg-white dark:bg-gray-800 border-gray-700 dark:border-gray-200 border-solid border-[1.5px] mt-1" />
                             <p className="text-2xl md:text-3xl font-bold tracking-widest">
                                 Works/
                             </p>
                         </div>
-                        <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+                        </FadeIn>
+                        <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <FadeIn>
                             <Link
                                 className="flex flex-col group shadow-2xs rounded-xl overflow-hidden hover:shadow-lg focus:outline-hidden focus:shadow-lg transition dark:bg-neutral-900 dark:shadow-neutral-700/70 border-solid dark:border-gray-500 border-gray-600 border-[1px] dark:hover:border-gray-200"
                                 href="#"
@@ -44,10 +46,10 @@ export default function Works() {
                                     </p>
                                 </div>
                             </Link>
+                            </FadeIn>
                         </div>
                     </div>
                 </div>
-            </FadeIn>
         </FadeInWithStagger>
     );
 }
