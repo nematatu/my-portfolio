@@ -2,13 +2,11 @@
 
 import * as Dialog from "@radix-ui/react-dialog";
 import { Cross2Icon } from "@radix-ui/react-icons";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import RenderIcon from "./RenderIcon";
 import { WorkItem } from "../const/type";
 import Link from "next/link";
 import { EaseDriver } from "@/components/ui/FadeIn";
-import { WorkCarousel } from "./WorkCarousel";
 import { EmblaOptionsType } from "embla-carousel";
 import EmblaCarousel from "./thumbnail/EmblaCarousel";
 
@@ -19,8 +17,6 @@ type WorkModalProps = {
 };
 
 const OPTIONS: EmblaOptionsType = {};
-const SLIDE_COUNT = 10;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 export function WorkModal({ isOpen, onClose, selectedWork }: WorkModalProps) {
     if (!selectedWork) {
