@@ -32,7 +32,7 @@ export default function About() {
 									<Link target="_blank" href="https://twitter.com/T_kanntoku">
 										<FaXTwitter className="w-5 h-5 md:w-6 md:h-6" />
 									</Link>
-									<Link target="_blank" href="https: //github.com/nematatu">
+									<Link target="_blank" href="https://github.com/nematatu">
 										<FaGithub className="w-5 h-5 md:w-6 md:h-6" />
 									</Link>
 									<Link target="_blank" href="https://zenn.dev/kotopasi">
