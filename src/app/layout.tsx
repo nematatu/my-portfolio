@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 		description: "amatatu's portfolio",
     url: "https://amatatu.com",
     images: {
-            url: "/assets/icon.ong", 
+            url: "/assets/icon.png", 
             type: "image/png", 
             width: 1200, 
             height: 630
