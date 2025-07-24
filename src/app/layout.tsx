@@ -18,8 +18,8 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="ja">
-			<body className={`${zen_Kaku_Gothic_New.className}  antialiased`}>
-				<div className="relative bg-gray-100 min-h-screen min-w-screen p-8 text-gray-700 dark:text-gray-200 dark:bg-gray-700">
+			<body className={`${zen_Kaku_Gothic_New.className} antialiased`}>
+				<div className="relative bg-gray-100 min-h-screen min-w-screen p-8 text-gray-700 dark:text-gray-200 dark:bg-gray-700 tracking-widest">
 					<Providers>{children}</Providers>
 				</div>
 			</body>
