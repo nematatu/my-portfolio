@@ -13,8 +13,6 @@ export const metadata: Metadata = {
     images: {
             url: "/assets/icon.png", 
             type: "image/png", 
-            width: 1200, 
-            height: 630
         }, 
 	},
 };
