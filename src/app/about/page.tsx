@@ -11,7 +11,7 @@ import Header from "@/layouts/v2/Header";
 export default function About() {
 	return (
 		<FadeInWithStagger>
-				<Header />
+			<Header />
 			<div className="w-full md:w-1/2 mx-auto space-y-8">
 				<FadeIn>
 					<div className="flex flex-col mt-9 md:mt-12">
