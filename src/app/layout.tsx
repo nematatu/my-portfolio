@@ -6,8 +6,16 @@ import { Providers } from "./providers";
 export const metadata: Metadata = {
 	metadataBase: new URL("https://amatatu.com"),
 	openGraph: {
+    type: "website",
 		title: "amatatu",
 		description: "amatatu's portfolio",
+    url: "https://amatatu.com",
+    images: {
+            url: "/assets/icon.ong", 
+            type: "image/png", 
+            width: 1200, 
+            height: 630
+        }, 
 	},
 };
 
