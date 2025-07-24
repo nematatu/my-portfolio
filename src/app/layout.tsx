@@ -16,7 +16,6 @@ export const metadata: Metadata = {
         },
     },
     twitter: {
-        type: "website",
         title: "amatatu",
         description: "amatatu's portfolio",
         url: "https://amatatu.com",
