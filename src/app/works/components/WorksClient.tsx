@@ -45,7 +45,7 @@ export function WorksClient({ worksData }: WorksClientProps) {
                                             width={200}
                                             height={0}
                                             className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-t-xl"
-                                            src={work.imageUrl}
+                                            src={`/works/${work.thumbnail}`}
                                             alt={work.title}
                                         />
                                     </div>

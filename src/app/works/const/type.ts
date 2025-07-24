@@ -2,7 +2,8 @@ export type WorkItem= {
     id: number;
     title: string;
     description: string;
-    imageUrl: string;
+    thumbnail: string;
+    images: string[];
     gitHubUrl?: string;
     url?: string;
     fullDescription: string;

@@ -8,12 +8,19 @@ import RenderIcon from "./RenderIcon";
 import { WorkItem } from "../const/type";
 import Link from "next/link";
 import { EaseDriver } from "@/components/ui/FadeIn";
+import { WorkCarousel } from "./WorkCarousel";
+import { EmblaOptionsType } from "embla-carousel";
+import EmblaCarousel from "./thumbnail/EmblaCarousel";
 
 type WorkModalProps = {
     isOpen: boolean;
     onClose: () => void;
     selectedWork: WorkItem | null;
 };
+
+const OPTIONS: EmblaOptionsType = {};
+const SLIDE_COUNT = 10;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 export function WorkModal({ isOpen, onClose, selectedWork }: WorkModalProps) {
     if (!selectedWork) {
@@ -42,14 +49,8 @@ export function WorkModal({ isOpen, onClose, selectedWork }: WorkModalProps) {
                         <Dialog.Title className="text-2xl md:text-3xl font-bold mb-4 dark:text-white">
                             {selectedWork.title}
                         </Dialog.Title>
-                        <div className="relative w-full h-[200px] md:h-[400px] md:my-6">
-                            <Image
-                                src={selectedWork.imageUrl}
-                                alt={selectedWork.title}
-                                fill
-                                style={{ objectFit: "contain" }}
-                                className="rounded-lg"
-                            />
+                        <div className="md:my-6">
+                            <EmblaCarousel images={selectedWork.images} options={OPTIONS} />
                         </div>
                         <div className="flex flex-col space-y-4">
                             <div className="md:flex space-y-5 md:space-y-0 md:space-x-5">
