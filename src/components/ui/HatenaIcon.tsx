@@ -7,7 +7,7 @@ import HatenaIconDark from "@/components/icons/hatenablog-logo-dark.svg";
 
 export default function HatenaIconSwitch() {
 	const [mounted, setMounted] = useState(false);
-	const { setTheme, resolvedTheme } = useTheme();
+	const { resolvedTheme } = useTheme();
 
 	useEffect(() => setMounted(true), []);
 
