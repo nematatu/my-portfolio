@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 	twitter: {
 		title: "amatatu",
 		description: "amatatu's portfolio",
+        url: "https://amatatu.com?time=111",
 		images: {
 			url: "/assets/icon.png",
 			type: "image/png",
