@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Logo from "@/components/icons/logo.svg";
 import { EaseDriver, FadeIn, FadeInWithStagger } from "@/components/ui/FadeIn";
-import HatenaIconSwitch from "@/components/ui/hatenaIcon";
+import HatenaIconSwitch from "@/components/ui/HatenaIcon";
 import ThemeSwitch from "@/components/ui/ThemeSwitch";
 
 export default function Home() {
