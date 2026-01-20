@@ -63,7 +63,7 @@ export default function Home() {
 						<FadeIn>
 							<Link
 								target="_blank"
-								href="https://amtt.hatenablog.com/"
+								href="https://blog.amatatu.com"
 								className="transition-colors hover:text-blue-500"
 							>
 								<div className="p-3 flex space-x-4 items-center">
