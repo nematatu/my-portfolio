@@ -61,16 +61,14 @@ export default function Home() {
 						</FadeIn>
 						<FadeIn>
 							<Link
-								target="_blank"
 								href="https://blog.amatatu.com"
-								className="transition-colors hover:text-blue-500"
+								className=" transition-colors hover:text-blue-500"
+                target="_blank"
 							>
-								<div className="p-3 flex space-x-4 items-center">
-									<div className="w-[11px] h-[11px] md:w-[13px] md:h-[12px] rounded-[3px] bg-white dark:bg-gray-800 border-gray-700 dark:border-gray-200 border-solid border-[1.5px]" />
-									<div className=" flex items-center space-x-1">
-										<p className="font-bold">Blog</p>
-									</div>
-									<p className="absolute left-28">{">"}</p>
+								<div className="p-3 flex space-x-8 items-center">
+									<div className="w-[11px] h-[11px] md:w-[12px] md:h-[12px] rounded-[3px] bg-white dark:bg-gray-800 border-gray-700 dark:border-gray-200 border-solid border-[1.5px]" />
+									<p className="font-bold">Blog</p>
+									<p className="absolute left-24">{">"}</p>
 								</div>
 							</Link>
 						</FadeIn>
