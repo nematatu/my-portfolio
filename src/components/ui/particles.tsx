@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 interface MousePosition {
 	x: number;
@@ -77,33 +77,7 @@ const Particles: React.FC<ParticlesProps> = ({
 	const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
 	const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1;
 
-	useEffect(() => {
-		if (canvasRef.current) {
-			context.current = canvasRef.current.getContext("2d");
-		}
-		initCanvas();
-		animate();
-		window.addEventListener("resize", initCanvas);
-
-		return () => {
-			window.removeEventListener("resize", initCanvas);
-		};
-	}, [color]);
-
-	useEffect(() => {
-		onMouseMove();
-	}, [mousePosition.x, mousePosition.y]);
-
-	useEffect(() => {
-		initCanvas();
-	}, [refresh]);
-
-	const initCanvas = () => {
-		resizeCanvas();
-		drawParticles();
-	};
-
-	const onMouseMove = () => {
+	const onMouseMove = useCallback(() => {
 		if (canvasRef.current) {
 			const rect = canvasRef.current.getBoundingClientRect();
 			const { w, h } = canvasSize.current;
@@ -115,7 +89,7 @@ const Particles: React.FC<ParticlesProps> = ({
 				mouse.current.y = y;
 			}
 		}
-	};
+	}, [mousePosition.x, mousePosition.y]);
 
 	type Circle = {
 		x: number;
@@ -130,7 +104,7 @@ const Particles: React.FC<ParticlesProps> = ({
 		magnetism: number;
 	};
 
-	const resizeCanvas = () => {
+	const resizeCanvas = useCallback(() => {
 		if (canvasContainerRef.current && canvasRef.current && context.current) {
 			circles.current.length = 0;
 			canvasSize.current.w = canvasContainerRef.current.offsetWidth;
@@ -141,9 +115,9 @@ const Particles: React.FC<ParticlesProps> = ({
 			canvasRef.current.style.height = `${canvasSize.current.h}px`;
 			context.current.scale(dpr, dpr);
 		}
-	};
+	}, [dpr]);
 
-	const circleParams = (): Circle => {
+	const circleParams = useCallback((): Circle => {
 		const x = Math.floor(Math.random() * canvasSize.current.w);
 		const y = Math.floor(Math.random() * canvasSize.current.h);
 		const translateX = 0;
@@ -166,11 +140,11 @@ const Particles: React.FC<ParticlesProps> = ({
 			dy,
 			magnetism,
 		};
-	};
+	}, [size]);
 
 	const rgb = hexToRgb(color);
 
-	const drawCircle = (circle: Circle, update = false) => {
+	const drawCircle = useCallback((circle: Circle, update = false) => {
 		if (context.current) {
 			const { x, y, translateX, translateY, size, alpha } = circle;
 			context.current.translate(translateX, translateY);
@@ -184,7 +158,7 @@ const Particles: React.FC<ParticlesProps> = ({
 				circles.current.push(circle);
 			}
 		}
-	};
+	}, [dpr, rgb]);
 
 	const clearContext = () => {
 		if (context.current) {
@@ -197,14 +171,14 @@ const Particles: React.FC<ParticlesProps> = ({
 		}
 	};
 
-	const drawParticles = () => {
+	const drawParticles = useCallback(() => {
 		clearContext();
 		const particleCount = quantity;
 		for (let i = 0; i < particleCount; i++) {
 			const circle = circleParams();
 			drawCircle(circle);
 		}
-	};
+	}, [circleParams, drawCircle, quantity]);
 
 	const remapValue = (
 		value: number,
@@ -218,7 +192,7 @@ const Particles: React.FC<ParticlesProps> = ({
 		return remapped > 0 ? remapped : 0;
 	};
 
-	const animate = () => {
+	const animate = useCallback(() => {
 		clearContext();
 		circles.current.forEach((circle: Circle, i: number) => {
 			// Handle the alpha value
@@ -267,7 +241,33 @@ const Particles: React.FC<ParticlesProps> = ({
 			}
 		});
 		window.requestAnimationFrame(animate);
-	};
+	}, [circleParams, drawCircle, ease, staticity, vx, vy]);
+
+	const initCanvas = useCallback(() => {
+		resizeCanvas();
+		drawParticles();
+	}, [drawParticles, resizeCanvas]);
+
+	useEffect(() => {
+		if (canvasRef.current) {
+			context.current = canvasRef.current.getContext("2d");
+		}
+		initCanvas();
+		animate();
+		window.addEventListener("resize", initCanvas);
+
+		return () => {
+			window.removeEventListener("resize", initCanvas);
+		};
+	}, [animate, color, initCanvas]);
+
+	useEffect(() => {
+		onMouseMove();
+	}, [onMouseMove]);
+
+	useEffect(() => {
+		initCanvas();
+	}, [initCanvas, refresh]);
 
 	return (
 		<div className={className} ref={canvasContainerRef} aria-hidden="true">

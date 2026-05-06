@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { zen_Kaku_Gothic_New } from "@/utils/fonts/v1/fonts";
+import { Zen_Kaku_Gothic_New } from "next/font/google";
 import { Providers } from "./providers";
+
+const zenKakuGothicNew = Zen_Kaku_Gothic_New({
+	subsets: ["latin"],
+	weight: ["400", "700"],
+});
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://amatatu.com"),
@@ -33,7 +38,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="ja">
-			<body className={`${zen_Kaku_Gothic_New.className} antialiased`}>
+			<body className={`${zenKakuGothicNew.className} antialiased`}>
 				<div className="relative bg-gray-100 min-h-screen min-w-screen p-8 text-gray-700 dark:text-gray-200 dark:bg-gray-700 tracking-widest">
 					<Providers>{children}</Providers>
 				</div>

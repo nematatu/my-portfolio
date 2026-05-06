@@ -1,5 +1,6 @@
 [tools]
 bun = "latest"
+ni = "latest"
 
 [tasks.lint]
 description = "Run biome"
