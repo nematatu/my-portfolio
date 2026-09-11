@@ -11,7 +11,7 @@ export default function Home() {
           <FadeIn>
             <Link href="/" className="flex space-x-4">
               <p className="text-sm md:text-lg italic text-xl font-bold tracking-widest">
-                Amtt.
+                Amtt. amatatu
               </p>
             </Link>
           </FadeIn>
