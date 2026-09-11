@@ -8,6 +8,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { SiZenn } from "react-icons/si";
 import { EaseDriver, FadeIn, FadeInWithStagger } from "@/components/ui/FadeIn";
 import Header from "@/layouts/v2/Header";
+import { SectionLabel } from "@/components/ui/SectionLabel";
 
 export default function About() {
   return (
@@ -16,11 +17,8 @@ export default function About() {
       <div className="w-full md:w-1/2 mx-auto space-y-8">
         <FadeIn>
           <div className="flex flex-col mt-9 md:mt-12">
-            <div className="flex space-x-4 md:space-x-8 items-center mb-8">
-              <div className="w-[12px] h-[12px] md:w-[15px] md:h-[15px] rounded-[3px] bg-white dark:bg-gray-800 border-gray-700 dark:border-gray-200 border-solid border-[1.5px] mt-1" />
-              <p className="text-2xl md:text-3xl font-bold tracking-widest">
-                About/
-              </p>
+            <div className="mb-8">
+              <SectionLabel as="h1">About</SectionLabel>
             </div>
             <div className="flex justify-between space-x-3 md:space-x-4 px-2">
               <p className="whitespace-pre-line tracking-widest">
@@ -59,12 +57,8 @@ export default function About() {
         <EaseDriver />
         <FadeIn>
           <div className="flex flex-col mb-8">
-            <div className="flex space-x-4 md:space-x-8 items-center mb-8">
-              <div className="w-[9px] h-[9px] md:w-[12px] md:h-[12px] rounded-sm bg-white dark:bg-gray-800 border-gray-700 dark:border-gray-200 border-solid border-[1.5px] mt-1" />
-
-              <p className="flex items-start text-xl md:text-2xl font-bold tracking-widest">
-                Skill
-              </p>
+            <div className="mb-8">
+              <SectionLabel>Skill</SectionLabel>
             </div>
             <div className="whitespace-pre-line tracking-widest space-y-4 px-2">
               <p className="tracking-widest font-bold text-lg md:text-xl">
